@@ -45,6 +45,9 @@
 
             List<Product> filteredProducts04 = Product.SearchProducts(catalog, p => p.Category == "Clothing" && p.Price < 100);
             filteredProducts04.ForEach(p => Console.WriteLine($"{p.Name} - ${p.Price} (Stock: {p.Stock})"));
+            Console.WriteLine();
+
+
             #endregion
 
             #region  Task 03 : Custom Report Generator -> 3.1 Print Reports
@@ -59,6 +62,19 @@
 
             #endregion
 
+            #region 3.2. Transform Products
+            ////Scenario 3
+            //Console.WriteLine("-- Summary List --");
+            //List<string> stringList = Product.TransformProducts(catalog, p => $"{p.Name} (${p.Price})");
+            // stringList.ForEach(p => Console.WriteLine(p));
+
+            ////Scenario 4
+            //Console.WriteLine();
+            //Console.WriteLine("-- Price Levels --");
+            //List<string> stringList02 = Product.TransformProducts(catalog, p => p.Price > 100 ? $"{p.Name}: Expensive!" : $"{p.Name}: Affordable");
+            //stringList02.ForEach(p => Console.WriteLine(p));
+
+            #endregion
         }
     }
 }

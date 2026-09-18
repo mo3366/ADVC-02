@@ -26,14 +26,26 @@ namespace ADVC_02
             return result;
         }
 
-       
-     public static void PrintReport(List<Product> products, Action<Product> printAction)
-        { 
-         foreach (var pro in products)
+
+        public static void PrintReport(List<Product> products, Action<Product> printAction)
+        {
+            foreach (var pro in products)
             {
                 printAction(pro);
-             }
+            }
             return;
+        }
+
+        public static List<string> TransformProducts( List<Product> products, Func<Product, string> transformFunction)
+        {
+            List<string> result = new List<string>();
+
+            foreach (var product in products)
+            {
+                result.Add(transformFunction(product));
+            }
+
+            return result;
         }
     }
 }
