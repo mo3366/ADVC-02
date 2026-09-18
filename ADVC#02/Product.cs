@@ -13,7 +13,7 @@ namespace ADVC_02
         public double Price { get; set; }
         public int Stock { get; set; }
 
-       public static List<Product> SearchProducts(List<Product> products, Func<Product, bool> filter)
+        public static List<Product> SearchProducts(List<Product> products, Func<Product, bool> filter)
         {
             List<Product> result = new List<Product>();
             foreach (var product in products)
@@ -36,7 +36,7 @@ namespace ADVC_02
             return;
         }
 
-        public static List<string> TransformProducts( List<Product> products, Func<Product, string> transformFunction)
+        public static List<string> TransformProducts(List<Product> products, Func<Product, string> transformFunction)
         {
             List<string> result = new List<string>();
 
@@ -46,6 +46,11 @@ namespace ADVC_02
             }
 
             return result;
+        }
+
+        public static List<Product> FilterProducts(List<Product> products, Predicate<Product> Filter)
+        {
+            return products.FindAll(Filter);
         }
     }
 }

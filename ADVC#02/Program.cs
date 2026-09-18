@@ -75,6 +75,15 @@
             //stringList02.ForEach(p => Console.WriteLine(p));
 
             #endregion
+
+            #region 3.3. Filter Products
+            //Scenario 5
+            //Console.WriteLine("-- Low-Stock Alert --");
+            //List<Product> PredicateProduct = Product.FilterProducts(catalog, p =>p.Stock<20);
+            //PredicateProduct.ForEach(p => Console.WriteLine($"[LOW STOCK] {p.Name}: only {p.Stock} left!"));
+            #endregion
+
+          
         }
     }
 }
