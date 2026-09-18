@@ -20,6 +20,7 @@
             };
 
             #region Task 01 : Smart Product Search
+
             //1. All Electronics products
             Console.WriteLine("-- Electronics --");
 
