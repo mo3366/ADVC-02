@@ -26,5 +26,14 @@ namespace ADVC_02
             return result;
         }
 
+       
+     public static void PrintReport(List<Product> products, Action<Product> printAction)
+        { 
+         foreach (var pro in products)
+            {
+                printAction(pro);
+             }
+            return;
+        }
     }
 }

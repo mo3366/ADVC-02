@@ -47,6 +47,18 @@
             filteredProducts04.ForEach(p => Console.WriteLine($"{p.Name} - ${p.Price} (Stock: {p.Stock})"));
             #endregion
 
+            #region  Task 03 : Custom Report Generator -> 3.1 Print Reports
+            ////Scenario 1
+            //Console.WriteLine();
+            //Console.WriteLine("-- Short Report --");
+            //Product.PrintReport(catalog, p => Console.WriteLine($"{p.Name} - ${p.Price}"));
+            ////Scenario 2
+            //Console.WriteLine();
+            //Console.WriteLine("-- Detailed Report --");
+            //Product.PrintReport(catalog, p => Console.WriteLine($"[{p.Category}] {p.Name} | Price: ${p.Price} | Stock: {p.Stock}")); 
+
+            #endregion
+
         }
     }
 }
