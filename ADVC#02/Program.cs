@@ -48,6 +48,8 @@
             Console.WriteLine();
 
 
+            //// Func<Product, bool> is used because the filter takes a Product and returns true or false.
+
             #endregion
 
             #region  Task 03 : Custom Report Generator -> 3.1 Print Reports
@@ -59,6 +61,9 @@
             //Console.WriteLine();
             //Console.WriteLine("-- Detailed Report --");
             //Product.PrintReport(catalog, p => Console.WriteLine($"[{p.Category}] {p.Name} | Price: ${p.Price} | Stock: {p.Stock}")); 
+
+
+            // Action<Product> is used because it takes a Product and performs an action without returning a value.
 
             #endregion
 
@@ -74,6 +79,9 @@
             //List<string> stringList02 = Product.TransformProducts(catalog, p => p.Price > 100 ? $"{p.Name}: Expensive!" : $"{p.Name}: Affordable");
             //stringList02.ForEach(p => Console.WriteLine(p));
 
+
+
+            // Func<Product, string> is used because it takes a Product and returns a transformed string.
             #endregion
 
             #region 3.3. Filter Products
@@ -81,9 +89,14 @@
             //Console.WriteLine("-- Low-Stock Alert --");
             //List<Product> PredicateProduct = Product.FilterProducts(catalog, p =>p.Stock<20);
             //PredicateProduct.ForEach(p => Console.WriteLine($"[LOW STOCK] {p.Name}: only {p.Stock} left!"));
+
+
+
+            // Predicate<Product> is used because it checks a condition and returns true or false.
+
             #endregion
 
-          
+
         }
     }
 }
